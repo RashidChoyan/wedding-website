@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>বিয়ের আমন্ত্রণ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button id="musicBtn" class="music-btn" type="button" aria-label="গান চালু/বন্ধ">♪</button>
+  <audio id="bgMusic" src="music.mp3" loop preload="auto"></audio>
+
+  <main class="stage" id="stage">
+
+    <!-- ১. শুধু খাম -->
+    <div class="envelope-wrap" id="envelopeWrap">
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="খাম খুলুন">
+        <div class="env-back"></div>
+        <div class="env-front"></div>
+        <div class="flap" id="flap"></div>
+        <div class="seal">❤</div>
+      </div>
+      <p class="hint" id="hint">খুলতে খামে ট্যাপ করুন</p>
+    </div>
+
+    <!-- ২. আমন্ত্রণ কার্ড (খাম গায়েব হলে দেখা যাবে) -->
+    <section class="card" id="card" aria-live="polite">
+      <p class="small">শুভ বিবাহ</p>
+      <h1 class="names">
+        <span class="name" id="groomName"></span>
+        <span class="amp">&amp;</span>
+        <span class="name" id="brideName"></span>
+      </h1>
+      <div class="divider"></div>
+
+      <p class="label">তারিখ</p>
+      <p class="value" id="weddingDate"></p>
+
+      <p class="label">স্থান</p>
+      <p class="value" id="venueName"></p>
+
+      <p class="countdown" id="countdown"></p>
+
+      <a class="map-btn" id="mapBtn" target="_blank" rel="noopener">📍 ম্যাপে দেখুন</a>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
